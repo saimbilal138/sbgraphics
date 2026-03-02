@@ -1,98 +1,79 @@
+<!-- Replace your entire index.html with this updated version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SB Graphics | Professional Freelance Designer</title>
-    <script src="https://kit.fontawesome.com" crossorigin="anonymous"></script>
+    <title>SB Graphics | Freelance Portfolio</title>
     <style>
-        :root { --main: #00f2fe; --dark: #0a0a0a; --card: #161616; }
-        body { font-family: 'Inter', sans-serif; background: var(--dark); color: white; margin: 0; }
+        :root { --accent: #00f2fe; --bg: #0a0a0a; --card: #161616; }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; margin: 0; text-align: center; }
         
-        /* Freelance Header */
-        nav { display: flex; justify-content: space-between; padding: 20px 8%; align-items: center; border-bottom: 1px solid #222; }
-        .logo { font-size: 1.5rem; font-weight: 800; color: var(--main); }
+        header { padding: 60px 20px; background: linear-gradient(to bottom, #111, #0a0a0a); }
+        h1 { font-size: 3rem; color: var(--accent); margin: 0; }
         
-        header { text-align: center; padding: 100px 5%; background: radial-gradient(circle at top, #111, #0a0a0a); }
-        h1 { font-size: 3.5rem; margin: 0; letter-spacing: -2px; }
-        .badge { background: #1e3a3a; color: var(--main); padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
-
-        /* Gig/Service Section */
-        .container { padding: 80px 8%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .container { padding: 40px 10%; }
+        .pricing-table { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
         
-        .gig-card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid #222; transition: 0.3s; }
-        .gig-card:hover { transform: translateY(-10px); border-color: var(--main); }
-        .gig-img { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; color: #444; font-weight: bold; }
-        .gig-info { padding: 20px; }
-        .gig-info h3 { margin: 0 0 10px 0; font-size: 1.2rem; }
-        .price { color: var(--main); font-weight: bold; font-size: 1.1rem; }
+        /* Pricing Card Design */
+        .price-card { background: var(--card); border: 1px solid #333; border-radius: 15px; width: 300px; padding: 30px; transition: 0.3s; }
+        .price-card:hover { border-color: var(--accent); transform: translateY(-10px); }
+        .price-card h2 { color: var(--accent); font-size: 1.5rem; }
+        .cost { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
+        .features { list-style: none; padding: 0; color: #888; text-align: left; margin-bottom: 30px; }
+        .features li { margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
 
         /* Order Buttons */
-        .btn-box { display: flex; gap: 10px; margin-top: 20px; }
-        .btn { flex: 1; padding: 12px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 0.9rem; }
-        .btn-wa { background: #25d366; color: white; }
-        .btn-mail { background: white; color: black; }
-
-        /* Floating WhatsApp */
-        .float-wa { position: fixed; bottom: 30px; right: 30px; background: #25d366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(0,0,0,0.3); z-index: 1000; }
-        
-        footer { text-align: center; padding: 50px; color: #555; border-top: 1px solid #222; }
+        .order-btn { display: block; padding: 15px; background: var(--accent); color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
+        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 15px 25px; border-radius: 50px; color: white; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
     </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">SB GRAPHICS</div>
-        <div class="badge">● AVAILABLE FOR HIRE</div>
-    </nav>
-
     <header>
-        <h1>I will create world-class <span style="color:var(--main)">Visual Designs</span> for your brand</h1>
-        <p style="color:#888; font-size: 1.2rem; margin-top: 20px;">Hi, I'm <b>Saim Bilal</b>. I provide high-end graphic design services with fast delivery.</p>
+        <h1>SB GRAPHICS</h1>
+        <p>Professional Graphic Design by <b>Saim Bilal</b></p>
+        <p>Email: saimbilal138@gmail.com</p>
     </header>
 
     <div class="container">
-        <h2 style="margin-bottom: 40px;">My Active Gigs</h2>
-        <div class="grid">
+        <h2>Choose Your Package</h2>
+        <div class="pricing-table">
             
-            <!-- Gig 1 -->
-            <div class="gig-card">
-                <div class="gig-img">PREMIUM LOGO DESIGN</div>
-                <div class="gig-info">
-                    <h3>Modern Minimalist Logo Branding</h3>
-                    <div class="price">Starting at $25</div>
-                    <div class="btn-box">
-                        <a href="https://wa.me" class="btn btn-wa">WhatsApp Order</a>
-                        <a href="mailto:saimbilal138@gmail.com" class="btn btn-mail">Email</a>
-                    </div>
-                </div>
+            <!-- Basic Package -->
+            <div class="price-card">
+                <h2>Basic</h2>
+                <div class="cost">$10</div>
+                <ul class="features">
+                    <li>✓ 1 Logo Concept</li>
+                    <li>✓ High Quality JPG</li>
+                    <li>✓ 2 Revisions</li>
+                    <li>✓ 24h Delivery</li>
+                </ul>
+                <a href="https://wa.me" class="order-btn">Order Basic</a>
             </div>
 
-            <!-- Gig 2 -->
-            <div class="gig-card">
-                <div class="gig-img">SOCIAL MEDIA PACK</div>
-                <div class="gig-info">
-                    <h3>Instagram/FB Posts & Banners</h3>
-                    <div class="price">Starting at $15</div>
-                    <div class="btn-box">
-                        <a href="https://wa.me" class="btn btn-wa">WhatsApp Order</a>
-                        <a href="mailto:saimbilal138@gmail.com" class="btn btn-mail">Email</a>
-                    </div>
-                </div>
+            <!-- Standard Package -->
+            <div class="price-card" style="border-color: #00f2fe;">
+                <h2>Standard</h2>
+                <div class="cost">$25</div>
+                <ul class="features">
+                    <li>✓ 3 Logo Concepts</li>
+                    <li>✓ Source File (AI/PSD)</li>
+                    <li>✓ Unlimited Revisions</li>
+                    <li>✓ Social Media Kit</li>
+                </ul>
+                <a href="https://wa.me" class="order-btn">Order Standard</a>
             </div>
 
         </div>
     </div>
 
     <!-- Floating WhatsApp -->
-    <a href="https://wa.me" class="float-wa">
-        <img src="https://upload.wikimedia.org" width="35" alt="WA">
-    </a>
+    <a href="https://wa.me" class="wa-float">Chat on WhatsApp</a>
 
-    <footer>
-        <p>Owner: Saim Bilal | saimbilal138@gmail.com</p>
-        <p>&copy; 2024 SB GRAPHICS Freelance Portal</p>
+    <footer style="margin-top: 50px; padding: 40px; color: #444;">
+        &copy; 2024 SB Graphics | Jauharabad, PK
     </footer>
 
 </body>
