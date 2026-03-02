@@ -1,81 +1,103 @@
-<!-- Replace your entire index.html with this updated version -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SB Graphics | Freelance Portfolio</title>
+    <title>SB GRAPHICS | Premium Design Agency</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
     <style>
-        :root { --accent: #00f2fe; --bg: #0a0a0a; --card: #161616; }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; margin: 0; text-align: center; }
-        
-        header { padding: 60px 20px; background: linear-gradient(to bottom, #111, #0a0a0a); }
-        h1 { font-size: 3rem; color: var(--accent); margin: 0; }
-        
-        .container { padding: 40px 10%; }
-        .pricing-table { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 40px; }
-        
-        /* Pricing Card Design */
-        .price-card { background: var(--card); border: 1px solid #333; border-radius: 15px; width: 300px; padding: 30px; transition: 0.3s; }
-        .price-card:hover { border-color: var(--accent); transform: translateY(-10px); }
-        .price-card h2 { color: var(--accent); font-size: 1.5rem; }
-        .cost { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
-        .features { list-style: none; padding: 0; color: #888; text-align: left; margin-bottom: 30px; }
-        .features li { margin-bottom: 10px; border-bottom: 1px solid #222; padding-bottom: 5px; }
+        :root { --accent: #00f2fe; --bg: #050505; --card: #111; --text: #888; }
+        * { box-sizing: border-box; transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); scroll-behavior: smooth; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: white; margin: 0; }
 
-        /* Order Buttons */
-        .order-btn { display: block; padding: 15px; background: var(--accent); color: black; text-decoration: none; border-radius: 8px; font-weight: bold; }
-        .wa-float { position: fixed; bottom: 20px; right: 20px; background: #25d366; padding: 15px 25px; border-radius: 50px; color: white; text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
+        /* Modern Navigation */
+        nav { display: flex; justify-content: space-between; padding: 20px 10%; align-items: center; position: fixed; width: 100%; top: 0; background: rgba(5,5,5,0.8); backdrop-filter: blur(20px); z-index: 1000; border-bottom: 1px solid #222; }
+        .logo { font-size: 1.5rem; font-weight: 800; letter-spacing: -1px; text-decoration: none; color: white; }
+        .logo span { color: var(--accent); }
+        nav a { color: white; text-decoration: none; margin-left: 30px; font-size: 0.9rem; font-weight: 600; opacity: 0.7; }
+        nav a:hover, nav a.active-link { opacity: 1; color: var(--accent); }
+
+        /* Hero Section */
+        header { padding: 180px 10% 100px; text-align: center; background: radial-gradient(circle at 50% -20%, #1a1a1a, #050505); }
+        h1 { font-size: clamp(3rem, 8vw, 5.5rem); margin: 0; line-height: 0.9; font-weight: 800; letter-spacing: -3px; }
+        .hero-p { color: var(--text); max-width: 600px; margin: 25px auto; font-size: 1.2rem; }
+
+        /* Category Filter System */
+        .filter-box { display: flex; justify-content: center; gap: 10px; margin: 40px 0; flex-wrap: wrap; }
+        .btn-filter { padding: 12px 25px; border-radius: 50px; border: 1px solid #333; background: transparent; color: white; cursor: pointer; font-weight: 700; }
+        .btn-filter.active { background: var(--accent); color: black; border-color: var(--accent); }
+
+        /* Portfolio Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; padding: 0 10%; }
+        .card { background: var(--card); border-radius: 24px; overflow: hidden; border: 1px solid #222; display: block; }
+        .card:hover { transform: translateY(-10px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(0,242,254,0.1); }
+        .card-img { height: 250px; background: #1a1a1a; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; }
+        .card-info { padding: 25px; }
+
+        /* Contact Form */
+        #contact { padding: 100px 10%; background: #080808; margin-top: 100px; }
+        .form-box { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; }
+        input, textarea { padding: 18px; border-radius: 15px; border: 1px solid #333; background: #111; color: white; font-family: inherit; }
+        .btn-send { padding: 18px; background: var(--accent); color: black; font-weight: 800; border: none; border-radius: 15px; cursor: pointer; }
+
+        /* Live Chat Widget (Floating) */
+        .chat-widget { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 9999; }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="index.html" class="logo">SB<span>GRAPHICS</span></a>
+        <div>
+            <a href="#work" class="active-link">Portfolio</a>
+            <a href="deals.html">Exclusive Deals</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
     <header>
-        <h1>SB GRAPHICS</h1>
-        <p>Professional Graphic Design by <b>Saim Bilal</b></p>
-        <p>Email: saimbilal138@gmail.com</p>
+        <h1>Creative Vision.<br>Digital Mastery.</h1>
+        <p class="hero-p">I'm <b>Saim Bilal</b>. I transform brands through high-end graphic identity and strategic visual storytelling.</p>
+        <div class="filter-box">
+            <button class="btn-filter active" onclick="filterSelection('all')">All Work</button>
+            <button class="btn-filter" onclick="filterSelection('logos')">Logos</button>
+            <button class="btn-filter" onclick="filterSelection('social')">Social Media</button>
+        </div>
     </header>
 
-    <div class="container">
-        <h2>Choose Your Package</h2>
-        <div class="pricing-table">
-            
-            <!-- Basic Package -->
-            <div class="price-card">
-                <h2>Basic</h2>
-                <div class="cost">$2</div>
-                <ul class="features">
-                    <img src="my-logo.jpg" alt="Description of my work" style="width:100%; max-width:400px;">
-                    <li>✓ 1 Logo Concept</li>
-                    <li>✓ High Quality JPG</li>
-                    <li>✓ 2 Revisions</li>
-                    <li>✓ 24h Delivery</li>
-                </ul>
-                <a href="https://wa.me" class="order-btn">Order Basic</a>
-            </div>
-
-            <!-- Standard Package -->
-            <div class="price-card" style="border-color: #00f2fe;">
-                <h2>Standard</h2>
-                <div class="cost">$5</div>
-                <ul class="features">
-                    <li>✓ 3 Logo Concepts</li>
-                    <li>✓ Source File (AI/PSD)</li>
-                    <li>✓ Unlimited Revisions</li>
-                    <li>✓ Social Media Kit</li>
-                </ul>
-                <a href="https://wa.me" class="order-btn">Order Standard</a>
-            </div>
-
+    <div class="grid" id="work">
+        <div class="card filter-item logos">
+            <div class="card-img"><img src="logo1.jpg" alt="Logo Work"></div>
+            <div class="card-info"><h3>Brand Identity System</h3><p style="color:var(--text)">Minimalist Tech Logo</p></div>
+        </div>
+        <div class="card filter-item social">
+            <div class="card-img"><img src="social1.jpg" alt="Social Media"></div>
+            <div class="card-info"><h3>Instagram Campaign</h3><p style="color:var(--text)">High-Conversion Ads</p></div>
         </div>
     </div>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me" class="wa-float">Chat on WhatsApp</a>
+    <section id="contact">
+        <h2 style="text-align: center;">Start a Deal</h2>
+        <form class="form-box" action="https://formspree.io" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" rows="5" placeholder="Project details..." required></textarea>
+            <button type="submit" class="btn-send">Send Inquiry</button>
+        </form>
+    </section>
 
-    <footer style="margin-top: 50px; padding: 40px; color: #444;">
-        &copy; 2024 SB Graphics | Jauharabad, PK
-    </footer>
+    <a href="https://wa.me" class="chat-widget">💬 Deal with Saim</a>
 
+    <script>
+        function filterSelection(c) {
+            var x = document.getElementsByClassName("filter-item");
+            if (c == "all") c = "";
+            for (var i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+                if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
